@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Roboto:wght@500&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="static/recipes.css">
+	<link rel="stylesheet" type="text/css" href="static/background.css">
+	<link rel="stylesheet" type="text/css" href="static/modal.css">
+	<link rel="stylesheet" type="text/css" href="static/header-footer.css">
+	<script src="static/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Предметы</title>
+</head>
+
+<body>
+	<div class="site-background"></div>
+	<div class="wrapper">
+		<h1 class="title">
+			<img src="/static//img/Site-icon.png" alt="site-icon">Factrio game helper
+		</h1>
+		<div class="container main_">
+			{% block header %}
+			{%include 'blocks/Header.html'%}
+			{%endblock%}
+			<h1 align="center">Предметы</h1>
+			<input class="form-control" type="text" placeholder="Поиск..." id="search-text" onkeyup="tableSearch()">
+			<table class="table-fixed-head" id="info-table">
+				<thead>
+					<tr>
+						<th data-type="int" style=" width: 5%;">
+							#
+						</th>
+						<th colspan="2" data-type="string" style=" width: 35%;">
+							Название
+						</th>
+						<th data-type="string" style="width:30%;">
+							Раздел
+						</th>
+						<th data-type="string" style="  width: 30%;">
+							Пакеты исследований
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					{%for i in items%}
+					<tr>
+						<td style=" width: 5%;">
+							{{i[0]}}
+						</td>
+						<td style=" width: 5%;">
+							<a href="#popup_{{i[7]}}">
+								<img class="lozad" data-src="static/img/{{i[7]}}.png"
+									src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs="
+									alt="{{i[1]}}" width="32px" height="32px">
+							</a>
+						</td>
+						<td style="width:30%; text-align: left;">
+							<a href="#popup_{{i[7]}}">
+								{{i[1]}}
+							</a>
+						</td>
+						<td style="width:30%;">
+							{{i[2]}}
+						</td>
+						<td style="width:30%;">
+							<div class="packs">
+								{%if i[3]!=None%}
+								{%for pack in i[3].split('\n') %}
+								<div class="pack">
+									<img class="lozad" data-src="/static/img/Packs/{{pack}}.png" src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=" alt="pack">
+								</div>
+								{%endfor%}
+								{%else%}
+								<p>Доступно с начала игры
+								<p>
+									{%endif%}
+							</div>
+						</td>
+					</tr>
+					{%endfor%}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="popups">
+		{%for i in items%}
+		<div id="popup_{{i[7]}}" class="popup">
+			<div class="popup_body">
+				<div class="Item-stat">
+					<a href="##" class="popup_close">X</a>
+					<div class="popup_title">{{i[1]}}</div>
+					<div class="entity_recipe">
+						<div class="entity">
+							<img class="lozad" data-src="static/img/Big/{{i[7]}}_entity.png" alt="{{i[1]}}">
+						</div>
+							<table class="popup-item-stat">
+								<tbody>
+									<tr>
+										<td colspan="2">
+											<p>Необходимые пакеты для исследования:</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="packs stat">
+												{%if i[3]!=None%}
+												{%for pack in i[3].split('\n') %}
+												<div class="pack">
+													<img class="lozad" data-src="/static/img/Packs/{{pack}}.png" width="32px" height="32px" alt="pack">
+												</div>
+												{%endfor%}
+												{%else%}
+												<p>Доступно с начала игры
+												<p>
+													{%endif%}
+											</div>
+										</td>
+									</tr>
+									{%if i[5]!=None%}
+									<tr>
+										<td colspan="2">
+											<p>Рецепт:</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="popup-recepie stat">
+											{%if i[5]!=None%}
+											{%set list=i[5].split(";")%}
+											<a href="#popup_{{list[0]}}" title="{{list[0]}}">
+												<div class="icon" style="background-color:#999;">
+													<img class="lozad" data-src="static/img/{{list[0]}}.png"
+														src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs="
+														alt="{{list[0]}}" width="32px" height="32px">
+													<div class="icon-text">{{list[1]}}</div>
+												</div>
+											</a>
+
+											{%for j in range(2,list|length-1,2)%}
+											+
+											<a href="#popup_{{list[j]}}" title="{{list[j]}}">
+												<div class="icon popup-image" style="background-color:#999;">
+													<img class="lozad" data-src="static/img/{{list[j]}}.png"
+														src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs="
+														alt="{{list[j]}}" width="32px" height="32px">
+													<div class="icon-text">{{list[j+1]}}</div>
+												</div>
+											</a>
+
+											{%endfor%}
+
+											&#8594;
+											<a href="#popup_{{i[7]}}" title="{{i[7]}}">
+												<div class="icon popup_image" style="background-color:#999;">
+													<img class="lozad" data-src="static/img/{{i[7]}}.png"
+														src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs="
+														alt="{{i[1]}}" width="32px" height="32px">
+													<div class="icon-text"> {{list[list|length-1]}} </div>
+												</div>
+											</a>
+											{%endif%}
+										</td>
+									</tr>
+									{%endif%}
+									<tr>
+										<td colspan="2">
+											<p>Может быть создано:</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="producedBy stat">
+											{%if i[6]!=None%}
+											{%for p in i[6].split('\n')%}
+											<div class="producer">
+												<img class="lozad" data-src="/static/img/producedBy/{{p}}.png" alt="p">
+											</div>
+											{%endfor%}
+											{%endif%}
+										</td>
+									</tr>
+								</tbody>
+							</table>
+					</div>
+					<div class="entity-disc">
+						{%if i[4]!=None%}
+						{%for s in i[4].split('\n')%}	
+							<p>{{s}}</p>
+						{%endfor%}
+						{%endif%}
+					</div>
+				</div>
+			</div>
+		</div>
+		{%endfor%}
+	</div>
+	{%block footer%}
+	{%include 'blocks/footer.html'%}
+	{% endblock %}
+	</div>
+	<script src="/static/js/load.js"></script>
+	<script src="static/js/sort.js"></script>
+	<script src="static/js/search.js"></script>
+</body>
+
+</html>

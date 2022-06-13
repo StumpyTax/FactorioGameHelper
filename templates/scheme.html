@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Roboto:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="static/schemes.css">
+	<link rel="stylesheet" type="text/css" href="static/background.css">
+	<link rel="stylesheet" type="text/css" href="static/header-footer.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="static/js/jquery/jquery.js"></script>
+	<title>Чертежи</title>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+</head>
+<body>
+<div class="site-background"></div>
+<div class="wrapper">
+	<h1 align="center" style="font-family: 'Fredericka the Great', cursive; color: #B07442; font-size: 60px;"><img
+		data-src="/static//img/Site-icon.png">Factrio game helper</h1>
+	<div class="container main_">
+		{% block header %}
+		{%include  'blocks/Header.html'%}
+		{%endblock%}
+		<div class="main-text">
+			<p>Здесь мы собрали некоторые схемы которые пригодятся при прохождении.</p>
+			<p>Вы можете найти схемы как для ранней игры, такие как "балансер" или "производство электросхем", так и для поздней, например схемы ядерных реакторов или "Процесс обогащения Коварекса". </p>
+		</div>
+		<div class="schemes">
+			{%for i in items%}
+			<a class="scheme" href="#popup_{{i[0]}}">
+				<div class="scheme-content" id="{{i[0]}}">
+						<div class="scheme-image">
+							<img class="lozad" data-src="/static/img/Scheme/{{i[5]}}.png">
+						</div>
+						<div class="scheme-text">
+								<p class="headline">{{i[1]}}</p>
+								<p>{{i[4]}}</p>
+						</div>
+				</div>
+			</a>
+			{%endfor%}
+    </div>
+	</div>
+			{%block footer%}
+			{%include  'blocks/footer.html'%}
+			{% endblock %}
+	</div>
+</div>
+<div class="popups">
+	{%for i in items%}
+<div id="popup_{{i[0]}}" class="popup">
+	<div class="popup_body">
+		<div class="popup_content">
+			<a href="##" class="popup_close">X</a>
+			<div class="popup_title">{{i[1]}}</div>
+			<div class="popup-content">
+				<div class="popup-image">
+			<img class="lozad" data-src="/static/img/Scheme/{{i[5]}}.png" src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
+		</div>
+			 <div class="popup_text">
+				 {%for j in i[2].split('\n')%}
+						<p>{{j}}</p>
+					{%endfor%}
+			 </div>
+			</div>
+			<p style="display: none;" id="{{i[5]}}">{{i[3]}}</p>
+			<button class="blueprint-copy-btn" onclick="copytext('#'+'{{i[5]|safe}}');">
+				<img class="lozad" alt="Blueprint.png" data-src="static/img/Blueprint.png" width="32" height="32" srcset="/static/img/Blueprint.png 1.5x, /img/Blueprint.png 2x" src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
+				Копировать чертеж
+			</button>
+		</div>
+	</div>
+</div>
+{%endfor%}
+</div>
+<script src="static/js/load.js"></script>
+<script src="static/js/copy.js"></script>
+<script src="static/js/script.js"></script>
+</body>
+</html>

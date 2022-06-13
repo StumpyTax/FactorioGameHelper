@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		<link rel="stylesheet" type="text/css" href="static/speedrunGuide.css">
+		<link rel="stylesheet" type="text/css" href="static/menu.css">
+		<link rel="stylesheet" type="text/css" href="static/background.css">
+		<link rel="stylesheet" type="text/css" href="static/header-footer.css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="static/js/jquery/jquery.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+		<title>FactorioGuide</title>
+		<div class="menu">
+			<a href="#" class="menu-btn"><span></span></a>
+			<nav class="menu-list">
+				{%for i in items%}
+					<a href="#{{i[0]}}"> <img class="lozad" data-src="/static/img/{{i[7]}}" src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=" loading="lazy"> {{i[2]}}</a>
+				{%endfor%}
+			</nav>
+		</div>
+	</head>
+	<body class="speedrun_body">
+		<div class="site-background"></div>
+		<div class="main">
+			{% block header %}
+			{%include 'blocks/Header.html'%}
+			{%endblock%}
+			<main class="page_main">
+				<div class="logo">
+					<img src="/static/img/factorio_logo.png" alt="logo">
+				</div>
+				<div class="speedrun_text">
+					<div>
+						<p class="headline">Вступление</p>
+						<p>Это Гайд по спидрану Factorio для начинающих.</p>
+						<p>Любой опытный игрок сможет запустить ракету, следуя этому
+							гайду,меньше чем за 4 часа.</p>
+						<p>А так же получение достижения "Недотёпам здесь не место" будет проще,
+							если
+							следовать этому гайду.</p>
+						<p class="headline">Карта</p>
+						<span>Рекомендуем использовать очень высокие настройки ресурсов</span>
+						<span>Для получение достижения "Недотёпам здесь не место" есть несколько
+							важных настроек . </span>
+						<ul>
+							<li>Продвинутые: Степень распространения → 0.</li>
+							<li>Размер начальной области → max .</li>
+							<li>Не изменяйте другие настройки в разделе "Враг", это может отключить
+								возможность получения
+								достижения.
+							</li>
+						</ul>
+						<span>Пример настроек карты: <a href="https://pastebin.com/AHf7uz31">https://pastebin.com/AHf7uz31</a></span>
+						<p class="headline">Список иследований</p>
+						<p>Некоторые исследования могут быть отложены, поэтому они отмечены цветом
+							в очередях исследований и
+							повторяются в качестве частого напоминания до самого позднего возможного
+							времени, если это
+							применимо.</p>
+						<span class="headline">Обязательные иследования</span>
+						<div class="researches researches-all">
+							<ul>
+								<li>Автоматизация</li>
+								<li>Логистика</li>
+								<li>Электроника</li>
+								<li>Быстрый манипулятор</li>
+								<li>Логистический исследовательский пакет</li>
+								<li>Производство стали</li>
+								<li>Стальной инструмент</li>
+								<li>Автоматизация 2</li>
+								<li>Продвинутая металлургия</li>
+								<li>Двигатель</li>
+								<li>Транспортировка и хранение жидкостей</li>
+								<li>Переработка нефти</li>
+								<li>Пластмассы</li>
+								<li>Продвинутая электроника</li>
+								<li>Обработка серы</li>
+								<li>Химический исследовательский пакет</li>
+								<li>Аккумулятор</li>
+								<li>Модули</li>
+								<li>Модуль продуктивности 1</li>
+							</ul>
+							<ul>
+								<li>Логистика 2</li>
+								<li>Железные дороги</li>
+								<li>Модуль скорости 1</li>
+								<li>Продвинутая обработка нефти</li>
+								<li>Смазочная жидкость</li>
+								<li>Электродвигатель</li>
+								<li>Робототехника</li>
+								<li>Строительная робототехника</li>
+								<li>Скорость рабочего дрона 1</li>
+								<li>Скорость рабочего дрона 2</li>
+								<li>Продвинутая электроника 2</li>
+								<li>Продвинутая металлургия 2</li>
+								<li>Производственный исследовательский пакет</li>
+								<li>Конструкция малой плотности</li>
+								<li>Вспомогательный исследовательский пакет</li>
+								<li>Ракетное топливо</li>
+								<li>Модуль продуктивности 2</li>
+								<li>Модуль скорости 2</li>
+							</ul>
+							<div>
+								<ul>
+									<li>Модуль продуктивности3</li>
+									<li>Модуль скорости 3</li>
+									<li>Блок управления ракетой</li>
+									<li>Передача эффектов</li>
+									<li>Ракетная шахта</li>
+								</ul>
+								<div class="optionalR">
+									<span class="headline">Дополнительные иследования</span>
+									<ul>
+										<li>Пояс для инструментов</li>
+										<li>Скорость лабораторий 1</li>
+										<li>Скорость лабораторий 2</li>
+										<li>Переработанное горючее</li>
+										<li>Бетон</li>
+										<li>Скорость лабораторий 3</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<div class="useful_links">
+							<div class="links">
+								<span class="headline">Полезные ссылки</span>
+								<a href="https://pastebin.com/AHf7uz31" class="link">Строка импорта
+									карты</a>
+
+								<a
+									href="https://www.dropbox.com/s/gmy2mwbbdf0x146/guide%20game.zip?dl=0"
+									class="link">Файл сохранения</a>
+
+								<a href="https://i.imgur.com/yN27tV3.jpg" class="link">Скриншот
+									финальной базы в высоком разрешении</a>
+
+								<a
+									href="https://docs.google.com/presentation/d/1XgyTdHzQM1cQrv1YpZJuRGtMv6AE9j4h6Phdn4Fe8-c/edit?usp=sharing"
+									class="link">Источник</a>
+							</div>
+							<div class="high_res">
+							<img  data-src="static/img/Speedrun/high_res_screen_498px.jpg" src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=" class="lozad">
+						</div>
+						</div>
+						{%for i in items%}
+						<div class="speedrun-chapter" id="{{i[0]}}">
+							<div class="chapter-disc">
+								<span class="headline chapter_headline">{{i[2]}}</span>
+								{%for disc in i[3].split('\n') %}
+								<p>{{disc}}</p>
+								{%endfor%}
+								{%if i[4]!=None%}
+								<ul>
+									{%for l in i[4].split('\n')%}
+									<li>{{l}}</li>
+									{%endfor%}
+								</ul>
+								{%endif%}
+							</div>
+							<div class="tasks">
+								<div class="research">
+									<span class="headline">Исследования</span>
+									<ul>
+										{%if i[6]!=None%}
+										{%for res in i[6].split('\n')%}
+										<li>{{res}}</li>
+										{%endfor%}
+										{%endif%}
+									</ul>
+								</div>
+								<div class="items">
+									<span class="headline">Список предметов</span>
+									<ul>
+										{%if i[5]!=None%}
+										{%for img in i[5].split('\n')%}
+										{% set amountNimg=img.split(';')%}
+										<li><p>{{amountNimg[0]}}<img class="lozad" data-src="static/img/{{amountNimg[1]}}" src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=" loading="lozad"></p></li>
+										{%endfor%}
+										{%endif%}
+									</ul>
+								</div>
+							</div>
+							<div class='images'>
+								{%for img in i[1].split('\n')%}
+								<div class="image">
+									<img data-src="static/img/Speedrun/{{img}}.jpg" src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=" alt="{{img}}"class="lozad" loading="lozad">
+								</div>
+								{%endfor%}
+							</div>
+						</div>
+						{%endfor%}
+
+						<div class="headline cen">
+							<span class="headline">Hit launch!</span>
+							<span class="headline">Congratulations!</span>
+						</div>
+					</div>
+				</main>
+			</div>
+			<script src="/static/js/menu.js"></script>
+			<script src="static/js/load.js"></script>
+		</body>
+	</html>

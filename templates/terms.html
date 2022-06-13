@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Roboto:wght@500&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="static/terms.css">
+	<link rel="stylesheet" type="text/css" href="static/background.css">
+	<link rel="stylesheet" type="text/css" href="static/header-footer.css">
+	<meta charset="utf-8">
+	<script src="static/js/jquery/jquery.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FactorioGuide</title>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+</head>
+
+<body>
+	<div class="site-background"></div>
+	<div class="wrapper ">
+		<h1 align="center" style="font-family: 'Fredericka the Great', cursive; color: #B07442; font-size: 60px;"><img
+				src="/static//img/Site-icon.png">Factrio game helper</h1>
+		<div class="main_">
+			{% block header %}
+		{%include  'blocks/Header.html'%}
+		{%endblock%}
+			<div class="main-content">
+
+			<div class="main-text">
+				<h1 class="headline">Словарь</h1>
+				<p>
+					Factorio-сложная техническая игра, в которой множество терминов, с которыми сталкивается игрок. Для рядового игрока они непонятны, а поиск их определений это "темный лес".
+				</p>
+				<p>Мы собрали некторые из них на данной странице чтобы игроки могли с легокстью понять, что обозначает тот или иной термин.</p>
+				<p>Для поиска конкретного определения рекомендуется использовать комбинацию клавиш <kbd class="keyboard-key nowrap">CTRL</kbd>&nbsp;+<kbd class="keyboard-key nowrap">F</kbd></p>
+				<p>Термины отсортированны в алфавитном порядке.</p>
+			</div>
+
+				<div class="terms-text" style="display:flex">
+					<div>
+						<h2 class="headline">Ассемблер</h2>
+						<p>
+							Это обозначает сборочный автомат.
+						</p>
+					</div>
+					<img width="25%" height="25%" style="margin: auto;"  src="/static/img/Big/Assembling_machine_2_entity.png">
+				</div>
+
+				<div class="terms-text">
+					<h2 class="headline">Буфер</h2>
+					<p>
+						Место, где хранится запас предметов, которые будут доступны, когда производство остановится
+					</p>
+				</div>
+
+				<div class="terms-text" id="shina">
+					<h2 class="headline">Главная шина</h2>
+					<p>Идея "главной шины" заключается в расположении наиболее используемых и полезных ингредиентов в одном месте для последующей их переработки в сборочных автоматах.Это хорошее решение против "спагетти-фабрик", т.к. заставляет планировать структуру завода, а необходимые предметы забирать из шины. Обратной стороной главной шины является использование большого количества конвейеров, что занимает много места под конвейерный буфер.
+					</p>
+					<p>Ниже представлен список предметов, которыми обычно игроки заполняют конвейеры шины:</p>
+					<ul>
+						<li>Несколько конвейеров заполнены железными пластинами, обычно кратно четырем, т.к. это то расстояние, которое может покрыть подземный конвейер.</li>
+						<li>Несколько конвейеров заполнены медными пластинами. Нужно примерно столько же, сколько и железа.</li>
+						<li>Железные шестерни так же можно увидеть на главных шинах, т.к. они занимают вдвое меньше места, чем железные пластины, необходимые для их производства.</li>
+						<li>Электросхемы. Их понадобится очень много для производства улучшенных электросхем и процессоров.</li>
+						<li>Улучшенные электросхемы.</li>
+						<li>Сталь.</li>
+						<li>Процессоры.</li>
+						<li>Аккумуляторы.</li>
+						<li>Пластмассовые бруски (иногда заменяются углем, из которого они производятся).</li>
+						<li>Камни. Необходимы в производстве производственных исследовательских пакетов и каменных блоков.</li>
+						<li>Сера. Необходима для производства химических исследовательских пакетов.</li>
+					</ul>
+					<p>Для каждого из перечисленных предметов выделяется отдельная полоса на конвейере, от куда он берется при необходимости.</p>
+					<div style="display:flex">
+						<img width="50%" height="50%" src="/static/img/Terms/main_shina.png">
+						<div>
+								<h3 class="headline">Вывод из шины</h3>
+								<p>Из шины также необходимо правильно выводить  рессурсы. Вот несколько чертежей ,с помощью которых можно правильно выводить рессурсы.</p>
+								<p style="display: none;" id="shina">0eNrtm89um0AQxl/F4tRI0Owsf4z9DD31WlUWTmiKYoOLIaoV+V4ptz5KVam9tM/gvFHBTmNSs+zM7pI0kU+OMfux7LD7+2bYXFvTWRkv8iQtJtMsu7TG1/sjS2v8rvG1/i05y9Ld4WVykUaz+lixWsTW2LpK8qKsjthWGs3rA7szHG6tbStJz+PP1hjWNqHl20ZL3toyKeJ5o9lilhRFnDeauYhmRR6ly0WWF840nhWNxt76vW3FaZEUSby76e2X1SQt59PqMmMQadjWIltWzbK0vmol5cBr37ZW1R/ua39dd+ofKY6XYhIpV6FXvF3KU5CCdikfLcWaSrZ1nuTx2e5nr0U3UBi4A2HeIjy8Fy6rxyG/yLPqUyrNt9J3z1lWFouyfqIOxEP6wLL2cR0dPv4tGrvOCSSAkWPDMCMIQI85TpirxIY1Q5OkgsiAixjQ+5gg+qowhwRTCHx8rAUTGgKEBOvsxJB+P4KFCkL63N1KVcvydgkfN+BkW7Ooalsd48721gZ5cvGxGLyargan5WmZJp/KeMJPBlF16lWcL3cRC8EbjvjQ9z3PHwb7tZ/V/T2izwT6mDH0GSQfM0c+Zox88JAikpUFM5Whs2cUxPVIOKZPOGYKcBLaEpAGTaTpQkyZYejBFy33Hnr0uQa1oLMPgSIntOhljjhTFHHABHE8ZeK8eT7E6cGPU+YiELXdHldZPKa4BHi+YqpnMkEDYRYQdNKrww3v4SwXDFUCddhVRNhGKlcClSs10Ed4sjsuJYZOL2hEP9Yidrh0KSZFofms09fOy/B2kEnZKFbgnX0IyYMt6suIjnzBwsYZemhFCQoozCGOijtXMYFIaRcdTtF90+nC5WbJuzNLs/jDvVeaZ9k8uoxOUEYpeFqj9JJSc5kp4H16LoovckDZGJk3Xb7CAAvWuUBBSprM03yWphFyOkq3hp1Qh/HkCMQypbsClbtS8UIoM01wRkArqWNoITLTunVvmRlA1b25tjty9O0RQ9oj4xWfEX20dfySw40ZJof155gcMG+ZmCHLxOiW6UF9ieSZhs+ruCQ0P/9RiQl6LDH1aqX6qzEBusZEGV/cChiYqF8Fer6KkYRD7fcaIzWXYeYNiSN/RaKMWm7unbmrXRZRSSWAWvUhzFukdkCOKGgYH8m2gxAdBUoFAfdehT8O+5AQ4srgdJXLFEfwaYLP/EuhF45C2la7sC/EGt06QHgIkEmbiSqBZH+cMoJdcwj2tBHs94fgoEcED40hONRH8KgXBOc4BrvPq2b/5Pmn9s7tI3QN7nEwuKvhSaj6yPmlnE+PA9Vj+nlMP3tMP5Ho89rknO0/W+01N19vbzbfNr833webn5sfg9sv1cev25vqlA5QIrkDdQ+iaj5exZO/29s7ur7+Aze2tks=</p>
+								<button class="blueprint-copy-btn" onclick="copytext('#shina')">
+									<img alt="Blueprint.png" src="static/img/Blueprint.png" width="32" height="32" srcset="/static/img/Blueprint.png/Blueprint.png 1.5x, /img/Blueprint.png 2x">
+									Копировать чертеж
+								</button>
+						</div>
+					</div>
+					</div>
+
+					<div class="terms-text">
+						<h2 class="headline">Инвентарь</h2>
+						<p>
+							Пространство, для хранения предметов
+						</p>
+						<img class="lozad" width="100%" height="100%"  data-src="/static/img/Terms/inventory.png" src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
+						<ul>
+							<li>
+								<h4 class="headline">
+									Предмет
+								</h4>
+								<p>
+									Вещи которые могут храниться в инвентаре(уголь, железные плиты,уран, пистолет, сборочный автомат и т.д.)
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="terms-text">
+						<h2 class="headline">Крафт</h2>
+						<p>
+							Создание предметов
+						</p>
+					</div>
+
+					<div class="terms-text">
+						<h2 class="headline">Лента</h2>
+						<p>Соркащенное название конвейерной ленты.
+						</p>
+					</div>
+
+					<div class="terms-text">
+						<h2 class="headline">Молл</h2>
+						<p>
+							Место на фабрике, где игрок может взять предметы для личного использования(крафта, строительства и т.д)
+						</p>
+					</div>
+
+					<div class="terms-text">
+						<h2 class="headline">Мощность</h2>
+						<p>
+							Является подобием расчетной единицы энергии.Мощность можно вырабатывать генераторами, а потреблять механизмами. В игре встретятся несколько вариации сокращений: килоджоуль (кДж) и мегаджоуль (МДж), гигаджоуль(ГДж), причем 1 МДж = 1000 кДж.
+						</p>
+					</div>
+
+					<div class="terms-text">
+						<h2 class="headline">Топливо</h2>
+						<p>
+							Относится к любому сгораемому предмету, который может быть использован для заправки устройств для сжигания топлива, таким как дрова, уголь и т.д
+						</p>
+					</div>
+
+					<div class="terms-text">
+						<h2 class="headline">Турель</h2>
+						<p>
+							Стационарное оборонительное оружие. В Factorio есть четыре типа турелей: лазерная турель, орудийная турель, огнеметная турель и артиллерийская турель.
+						</p>
+					</div>
+
+					<div class="terms-text">
+						<h2 class="headline">Чертежи</h2>
+						<p>
+							Это готовые схемы, которые позволяют «копировать-вставить» элементы фабрики при помощи Строительных дронов.
+						</p>
+						<p>
+							Чтобы создать чертеж выберите предмет «чертеж» из инвентаря или с панели инструментов. Как только иконка чертежа «прилипнет» к курсору, зажмите ЛКМ и выделите область, где расположены интересующие вас постройки. Все здания, которые будут добавлены на чертеж выделяются зеленой рамкой. Как только все, что нужно скопировать окажется внутри рамки, отпустите ЛКМ и откроется меню чертежа.
+						</p>
+						<p>Чтобы сохранить чертеж нажмите кнопку открывающую книгу чертежей, по умолчанию  <kbd class="keyboard-key nowrap">B</kbd>, и поместите его в доступный слот.</p>
+						<img class="lozad" data-src="/static/img/Terms/blueprints.png" src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=" width="50%">
+					</div>	
+			</div>
+		</div>
+		{%block footer%}
+			{%include  'blocks/footer.html'%}
+			{% endblock %}
+		<script src="static/js/copy.js"></script>
+		<script src="/static/js/load.js"></script>
+	</div>
+</body>
+</html>
