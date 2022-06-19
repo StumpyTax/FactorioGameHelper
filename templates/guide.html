@@ -16,12 +16,10 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Roboto:wght@500&display=swap"
             rel="stylesheet">
-        <link rel="stylesheet" type="text/css"
-            href="static/bootstrap/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="static/menu.css">
         <link rel="stylesheet" type="text/css" href="static/background.css">
         <link rel="stylesheet" type="text/css" href="static/guide.css">
-        <link rel="stylesheet" type="text/css" href="static/header-footer.css">
+        <link rel="stylesheet" type="text/css" href="static/style.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>FactorioGuide</title>
@@ -142,13 +140,13 @@
                             src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Финал</a>
                 </nav>
             </div>
-            <div class="main_">
+            <div class="main">
                 {% block header %}
                 {%include 'blocks/Header.html'%}
                 {%endblock%}
                 <div class="guide-content">
                     <div class="guide-text guide-start" style="display:flex;">
-                        <div style="padding: 5px;">
+                        <div class="guide-preface">
                             <p>Наша команда прошла игру Factorio, и выделила
                                 основные этапы, чтобы поделится с вами нашим
                                 опытом. Так же мы выделили советы, которые
@@ -190,7 +188,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div align="right">
+                        <div class="image">
                             <img class="lozad"
                                 data-src="/static/img/index_img.png">
                         </div>

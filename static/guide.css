@@ -1,28 +1,5 @@
-*{
-	padding: 0;
-	margin: 0;
-}
-.wrapper{
-	display: grid;
-	grid-template-rows: auto 1fr auto;
-	min-height: 100vh;
-}
-body{
-	font-family:Roboto;
-	background: url(/static/img/Background1.png);
-}
-
-.main_{
-	margin-left: auto;
-	margin-right:auto;
-	background:#B07442 url(/static/img/block_bg.png) ;
-	background-size: cover;
-	border: 3px solid #000000;
-	border-radius: 20px;
-	box-sizing: border-box;
-	padding:0%;
-	width: 85%;
-	max-width: 1236px;
+a {
+	color: #5ddffd;
 }
 .guide-content{
 	display: flex;
@@ -32,12 +9,14 @@ body{
 	padding: 10px 25px 10px 25px;
 }
 .guide-text{
+	border: 2px solid black;
+}
+.guide-preface, .guide-text{
 	background-color: #553720;
 	color: antiquewhite;
-	border: 2px solid black;
 	font-style: normal;
 	font-weight: 500;
-	font-size: 20px;
+	font-size: calc(11px + 4 * ((100vw - 320px) / (1230 - 320)));;
 	line-height: 26px;
 	padding: 5px;
 }
@@ -63,4 +42,17 @@ border-radius: 15px;
 .headline {
 	font-weight: bold;
 	color: orange;
+}
+.image{
+	width: 100%;
+	max-width: 100%;
+}
+.image img{
+	width: 100%;
+}
+@media (max-width:768px){
+	.guide-start{
+		display: flex;
+		flex-direction: column-reverse;
+	}
 }

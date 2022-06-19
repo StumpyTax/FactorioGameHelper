@@ -12,13 +12,12 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Roboto:wght@500&display=swap"
 		rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="static/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="static/background.css">
 	<link rel="stylesheet" type="text/css" href="static/style.css">
-	<link rel="stylesheet" type="text/css" href="static/header-footer.css">
+	<link rel="stylesheet" type="text/css" href="static/index.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>FactorioGuide</title>
+	<title>FactorioGameHelper</title>
 </head>
 <body>
 	<div class="site-background"></div>
@@ -26,7 +25,7 @@
 		<h1 class="title">
 			<img src="/static//img/Site-icon.png" alt="icon">Factrio game helper
 		</h1>
-		<div class="main_">
+		<div class="main">
 			{% block header %}
 			{%include  'blocks/Header.html'%}
 			{%endblock%}
@@ -48,30 +47,36 @@
 					<h1 class="headline">Гайды</h1>
 					<div class="main-btn">
 						<a href="SpeedrunGuide">
-						<div class=" btn">
+						<div class=" btn speedrun">
 							<h3 style="text-decoration: underline;">Cпидран</h3>
 							<div class="btn-text">
 							<p>Гайд на основе анализа спидрана</p>
 							</div>
-							<p class="arrow">&rarr;</p>
+							<div class="arrow">
+								<p>&rarr;</p>
+							</div>
 						</div>
 					</a>
 					<a href="guide">
-						<div class=" btn">
+						<div class=" btn guide">
 							<h3 style="text-decoration: underline;">Гайд для новичков</h3>
 							<div class="btn-text">
 							<p>Гайд на основе нашего прохождения</p>
 							</div>
-							<p class="arrow">&rarr;</p>
+							<div class="arrow">
+							<p>&rarr;</p>
+						</div>
 						</div>
 					</a>
 						<a href="terms">
-						<div class=" btn">
+						<div class=" btn terms">
 						<h3 style="text-decoration: underline;">Термины</h3>
 						<div class="btn-text">
 							<p>Разъясниение терминов из игры</p>
 						</div>
-						<p class="arrow">&rarr;</p>
+						<div class="arrow">
+							<p>&rarr;</p>
+						</div>
 					</div>
 				</a>
 				</div>

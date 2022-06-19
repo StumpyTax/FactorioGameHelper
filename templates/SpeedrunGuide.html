@@ -8,10 +8,15 @@
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+				href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Roboto:wght@500&display=swap"
+				rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="static/speedrunGuide.css">
 		<link rel="stylesheet" type="text/css" href="static/menu.css">
 		<link rel="stylesheet" type="text/css" href="static/background.css">
-		<link rel="stylesheet" type="text/css" href="static/header-footer.css">
+		<link rel="stylesheet" type="text/css" href="static/style.css">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src="static/js/jquery/jquery.js"></script>
@@ -26,8 +31,11 @@
 			</nav>
 		</div>
 	</head>
-	<body class="speedrun_body">
+	<body>
 		<div class="site-background"></div>
+		<div class="wrapper">
+			<h1 align="center" style="font-family: 'Fredericka the Great', cursive; color: #B07442; font-size: 60px;"><img
+				src="/static//img/Site-icon.png">Factrio game helper</h1>
 		<div class="main">
 			{% block header %}
 			{%include 'blocks/Header.html'%}
@@ -65,7 +73,7 @@
 							времени, если это
 							применимо.</p>
 						<span class="headline">Обязательные иследования</span>
-						<div class="researches researches-all">
+						<div class="researches-all">
 							<ul>
 								<li>Автоматизация</li>
 								<li>Логистика</li>
@@ -182,7 +190,7 @@
 										{%if i[5]!=None%}
 										{%for img in i[5].split('\n')%}
 										{% set amountNimg=img.split(';')%}
-										<li><p>{{amountNimg[0]}}<img class="lozad" data-src="static/img/{{amountNimg[1]}}" src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=" loading="lozad"></p></li>
+										<li>{{amountNimg[0]}}<img class="lozad" data-src="static/img/{{amountNimg[1]}}" src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=" loading="lozad"></li>
 										{%endfor%}
 										{%endif%}
 									</ul>
@@ -205,6 +213,10 @@
 					</div>
 				</main>
 			</div>
+			{%block footer%}
+			{%include 'blocks/footer.html'%}
+			{%endblock%}
+		</div>
 			<script src="/static/js/menu.js"></script>
 			<script src="static/js/load.js"></script>
 		</body>

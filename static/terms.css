@@ -1,13 +1,3 @@
-.wrapper{
-	display: grid;
-	grid-template-rows: auto 1fr auto;
-	min-height: 100vh;
-}
-body{
-	font-family:Roboto;
-	background: url(/static/img/Background1.png);
-}
-
 .main_{
 	margin-left: auto;
 	margin-right:auto;
@@ -21,10 +11,6 @@ body{
 	max-width: 1236px;
 }
 .main-content{
-	display: flex;
-	border-bottom: 3px solid #000000;
-	margin-top: 1rem;
-	padding: 10px 25px 10px 25px;
   flex-direction: column;
 }
 .terms-text {
@@ -44,16 +30,6 @@ body{
 	color: orange;
 }
 .main-text {
-	font-size: 20px;
-	background: #333030cc url(/static//img/block_bg.png);;
-	border-radius: 10px;
-	color: antiquewhite;
-	border: 2px solid black;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 20px;
-	line-height: 26px;
-	padding: 5px;
 	margin-bottom: 5px;
 }
 .keyboard-key {

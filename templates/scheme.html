@@ -11,22 +11,23 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Roboto:wght@500&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="static/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="static/schemes.css">
+	<link rel="stylesheet" type="text/css" href="static/modal.css">
 	<link rel="stylesheet" type="text/css" href="static/background.css">
-	<link rel="stylesheet" type="text/css" href="static/header-footer.css">
+	<link rel="stylesheet" type="text/css" href="static/style.css">
+	<link rel="stylesheet" type="text/css" href="static/schemes.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="static/js/jquery/jquery.js"></script>
-	<title>Чертежи</title>
+	<title>Схемы</title>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 </head>
 <body>
 <div class="site-background"></div>
 <div class="wrapper">
-	<h1 align="center" style="font-family: 'Fredericka the Great', cursive; color: #B07442; font-size: 60px;"><img
-		data-src="/static//img/Site-icon.png">Factrio game helper</h1>
-	<div class="container main_">
+	<h1 class="title">
+		<img src="/static//img/Site-icon.png" alt="site-icon">Factrio game helper
+	</h1>
+	<div class="container main">
 		{% block header %}
 		{%include  'blocks/Header.html'%}
 		{%endblock%}
@@ -58,6 +59,7 @@
 <div class="popups">
 	{%for i in items%}
 <div id="popup_{{i[0]}}" class="popup">
+	<a href="##" class="popup_area"></a>
 	<div class="popup_body">
 		<div class="popup_content">
 			<a href="##" class="popup_close">X</a>
@@ -74,7 +76,7 @@
 			</div>
 			<p style="display: none;" id="{{i[5]}}">{{i[3]}}</p>
 			<button class="blueprint-copy-btn" onclick="copytext('#'+'{{i[5]|safe}}');">
-				<img class="lozad" alt="Blueprint.png" data-src="static/img/Blueprint.png" width="32" height="32" srcset="/static/img/Blueprint.png 1.5x, /img/Blueprint.png 2x" src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
+				<img class="lozad" alt="Blueprint" data-src="/static/img/Blueprint.png" width="32" height="32" src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
 				Копировать чертеж
 			</button>
 		</div>

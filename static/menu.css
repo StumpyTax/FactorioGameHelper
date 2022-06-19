@@ -45,11 +45,12 @@ section {
   font-weight: 900;
   color: orange;
   margin-top: 5px;
+  font-size: calc(11px + 4 * ((100vw - 320px) / (1230 - 320)));;
 }
 .menu-btn {
   width: 35px;
   height: 80px;
-  background-color: #333;
+  background-color: #fff;
   position: absolute;
   right: -35px;
   border-bottom-right-radius: 10px;
@@ -114,4 +115,9 @@ section {
 .menu-nav__link_active {
   transform: translateX(0%);
   opacity: 1;
+}
+@media (max-width:768px){
+  .menu{
+    width: 40%;
+  }
 }
