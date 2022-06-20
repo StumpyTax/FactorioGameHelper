@@ -1,830 +1,711 @@
 <!DOCTYPE html>
-<html xmlns:width="http://www.w3.org/1999/xhtml"
-    xmlns:height="http://www.w3.org/1999/xhtml">
-    <head>
-        <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32"
-            href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16"
-            href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Roboto:wght@500&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="static/menu.css">
-        <link rel="stylesheet" type="text/css" href="static/background.css">
-        <link rel="stylesheet" type="text/css" href="static/guide.css">
-        <link rel="stylesheet" type="text/css" href="static/style.css">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>FactorioGuide</title>
-        <script src="static/js/jquery/jquery.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
-    </head>
-    <body>
-        <div class="site-background"></div>
-        <div class="wrapper">
-            <h1 align="center" style="font-family: 'Fredericka the Great',
-                cursive; color: #B07442; font-size: 60px;"><img class="lozad"
-                    data-src="/static//img/Site-icon.png"
-                    src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs="
-                    >Factrio game helper</h1>
-            <div class="menu">
-                <a href="#" class="menu-btn"><span></span></a>
-                <nav class="menu-list">
-                    <a href="#main_advices"> <img
-                        class="lozad"
-                            data-src="/static/img/Blueprint.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs="> Основные
-                        советы</a>
-                    <a href="#start"> <img class="lozad"
-                            data-src="/static/img/Atomic_bomb.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs="> Начало</a>
-                    <a href="#beg_min"><img class="lozad"
-                            data-src="/static/img/Burner_mining_drill.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
-                        Начальная добыча</a>
-                    <a href="#electro"><img class="lozad"
-                            data-src="/static/img/Steam_engine.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
-                        Электричество</a>
-                    <a href="#first_reserches"><img class="lozad"
-                            data-src="/static/img/Submachine_gun.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs="> Первые
-                        исследования</a>
-                    <a href="#more_plates"><img class="lozad"
-                            data-src="/static/img/Iron_plate.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs="> Больше
-                        пластин!!</a>
-                    <a href="#shina"><img class="lozad"
-                            data-src="/static/img/Splitter.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs="> Главная шина</a>
-                    <a href="#more_belts"><img class="lozad"
-                            data-src="/static/img/Transport_belt.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs="> Больше
-                        конвейеров!!</a>
-                    <a href="#res"><img class="lozad"
-                            data-src="/static/img/Lab.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Исследования</a>
-                    <a href="#bugs"><img class="lozad"
-                            data-src="/static/img/Small_biter.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs="> С меня
-                        довольно этих гре&^$#х
-                        тараканов на этом гре*№!#м заводе!!</a>
-                    <a href="#circ"><img class="lozad"
-                            data-src="/static/img/Electronic_circuit.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
-                        Электросхемы</a>
-                    <a href="#green"><img class="lozad"
-                            data-src="/static/img/Logistic_science_pack.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
-                        Зеленые пакеты.</a>
-                    <a href="#steel"><img class="lozad"
-                            data-src="/static/img/Steel_plate.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs="> Сталь</a>
-                    <a href="#fast_belts"><img class="lozad"
-                            data-src="/static/img/Fast_transport_belt.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Быстрые
-                        конвейеры</a>
-                    <a href="#chem"> <img class="lozad"
-                            data-src="/static/img/Pumpjack.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Химия</a>
-                    <a href="#blue"><img class="lozad"
-                            data-src="/static/img/Chemical_science_pack.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Синие
-                        пакеты</a>
-                    <a href="#black_ingr"> <img class="lozad"
-                            data-src="/static/img/Military_science_pack.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Ингридиенты
-                        для черных пакетов</a>
-                    <a href="#walls"><img class="lozad"
-                            data-src="/static/img/Wall.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Стены</a>
-                    <a href="#black"><img class="lozad"
-                            data-src="/static/img/Military_science_pack.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Черные
-                        пакеты</a>
-                    <a href="#neft"><img class="lozad"
-                            data-src="/static/img/Chemical_plant.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Продвинутаяобработка
-                        нефти (смазка,твердое топливо и ракетное топливо)</a>
-                    <a href="#cons"><img class="lozad"
-                            data-src="/static/img/Raw_fish.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Последствия</a>
-                    <a href="#uran"><img class="lozad"
-                            data-src="/static/img/Uranium_ore.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Уран</a>
-                    <a href="#purpule"><img class="lozad"
-                            data-src="/static/img/Production_science_pack.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Фиолетовые
-                        пакеты</a>
-                    <a href="#reactor"><img class="lozad"
-                            data-src="/static/img/Nuclear_reactor.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Ядерный
-                        реактор</a>
-                    <a href="#yellow"><img class="lozad"
-                            data-src="/static/img/Utility_science_pack.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Желтые
-                        пакеты</a>
-                    <a href="#rocket"><img class="lozad"
-                            data-src="/static/img/Rocket_silo.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Ракетная
-                        шахта</a>
-                    <a href="#fin"><img class="lozad"
-                            data-src="/static/img/Rocket.png"
-                            src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Финал</a>
-                </nav>
-            </div>
-            <div class="main">
-                {% block header %}
-                {%include 'blocks/Header.html'%}
-                {%endblock%}
-                <div class="guide-content">
-                    <div class="guide-text guide-start" style="display:flex;">
-                        <div class="guide-preface">
-                            <p>Наша команда прошла игру Factorio, и выделила
-                                основные этапы, чтобы поделится с вами нашим
-                                опытом. Так же мы выделили советы, которые
-                                помогут вам при прохождении.</p>
-                            <p>Мы надеемся что вы не совершите тех же ошибок что
-                                и мы, и у вас получится завод превосходящий наш
-                                по всем параметрам.</p>
-                            <p>Сид нашего прохождения: <span
-                                    style="color:orange;">1814148305</span> .</p>
-                            <div class="advices" id="main_advices">
-                                <p><b>Основные советы:</b></p>
-                                <ul style="color: orange;">
-                                    <li>Изучайте интерфейс и кнопки управления</li>
-                                    <li>Не игнорируйте игровые подсказки</li>
-                                    <li>Проходите обучения, которые
-                                        предоставляет
-                                        игра.</li>
-                                    <li>Создайте производство предметов, которые
-                                        постоянно используются: конвейерные
-                                        ленты, столбы, разделители и подземные
-                                        конвейеры. </li>
-                                    <li>Исользуйте модули.</li>
-                                    <li>Создайте молл, чтобы не ходить по всему
-                                        заводу и собирать предметы для крафта.</li>
-                                    <li>Как только вам становится доступна
-                                        добыча
-                                        урана, организуйте ее добычу. Вам
-                                        понадобиться уран-235, чтобы начать
-                                        процесс
-                                        обогащения. Шанс на получение
-                                        урана-235 при простой обработке равен
-                                        0,7%.</li>
-                                    <li>Перебрать лучше, чем недобрать.</li>
-                                    <li>Всегда думайте о том, как будете
-                                        расширять
-                                        производство в случае необходимости.</li>
-                                    <li>Создайте дронов, как только они станут
-                                        доступны.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="image">
-                            <img class="lozad"
-                                data-src="/static/img/index_img.png">
+<html xmlns:width="http://www.w3.org/1999/xhtml" xmlns:height="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="static/menu.css">
+    <link rel="stylesheet" type="text/css" href="static/background.css">
+    <link rel="stylesheet" type="text/css" href="static/guide.css">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FactorioGuide</title>
+    <script src="static/js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+</head>
+
+<body>
+    <div class="site-background"></div>
+    <div class="wrapper">
+        <h1 class="title">
+            <img src="/static/img/Site-icon.png" alt="site-icon">Factrio game helper
+        </h1>
+        <div class="menu">
+            <a href="#" class="menu-btn"><span></span></a>
+            <nav class="menu-list">
+                <a href="#main_advices"> <img class="lozad" data-src="/static/img/Blueprint.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
+                    Основные
+                    советы</a>
+                <a href="#start"> <img class="lozad" data-src="/static/img/Atomic_bomb.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
+                    Начало</a>
+                <a href="#beg_min"><img class="lozad" data-src="/static/img/Burner_mining_drill.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
+                    Начальная добыча</a>
+                <a href="#electro"><img class="lozad" data-src="/static/img/Steam_engine.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
+                    Электричество</a>
+                <a href="#first_reserches"><img class="lozad" data-src="/static/img/Submachine_gun.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
+                    Первые
+                    исследования</a>
+                <a href="#more_plates"><img class="lozad" data-src="/static/img/Iron_plate.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
+                    Больше
+                    пластин!!</a>
+                <a href="#shina"><img class="lozad" data-src="/static/img/Splitter.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
+                    Главная шина</a>
+                <a href="#more_belts"><img class="lozad" data-src="/static/img/Transport_belt.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
+                    Больше
+                    конвейеров!!</a>
+                <a href="#res"><img class="lozad" data-src="/static/img/Lab.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Исследования</a>
+                <a href="#bugs"><img class="lozad" data-src="/static/img/Small_biter.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
+                    С меня
+                    довольно этих гре&^$#х
+                    тараканов на этом гре*№!#м заводе!!</a>
+                <a href="#circ"><img class="lozad" data-src="/static/img/Electronic_circuit.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
+                    Электросхемы</a>
+                <a href="#green"><img class="lozad" data-src="/static/img/Logistic_science_pack.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
+                    Зеленые пакеты.</a>
+                <a href="#steel"><img class="lozad" data-src="/static/img/Steel_plate.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">
+                    Сталь</a>
+                <a href="#fast_belts"><img class="lozad" data-src="/static/img/Fast_transport_belt.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Быстрые
+                    конвейеры</a>
+                <a href="#chem"> <img class="lozad" data-src="/static/img/Pumpjack.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Химия</a>
+                <a href="#blue"><img class="lozad" data-src="/static/img/Chemical_science_pack.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Синие
+                    пакеты</a>
+                <a href="#black_ingr"> <img class="lozad" data-src="/static/img/Military_science_pack.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Ингридиенты
+                    для черных пакетов</a>
+                <a href="#walls"><img class="lozad" data-src="/static/img/Wall.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Стены</a>
+                <a href="#black"><img class="lozad" data-src="/static/img/Military_science_pack.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Черные
+                    пакеты</a>
+                <a href="#neft"><img class="lozad" data-src="/static/img/Chemical_plant.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Продвинутаяобработка
+                    нефти (смазка,твердое топливо и ракетное топливо)</a>
+                <a href="#cons"><img class="lozad" data-src="/static/img/Raw_fish.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Последствия</a>
+                <a href="#uran"><img class="lozad" data-src="/static/img/Uranium_ore.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Уран</a>
+                <a href="#purpule"><img class="lozad" data-src="/static/img/Production_science_pack.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Фиолетовые
+                    пакеты</a>
+                <a href="#reactor"><img class="lozad" data-src="/static/img/Nuclear_reactor.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Ядерный
+                    реактор</a>
+                <a href="#yellow"><img class="lozad" data-src="/static/img/Utility_science_pack.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Желтые
+                    пакеты</a>
+                <a href="#rocket"><img class="lozad" data-src="/static/img/Rocket_silo.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Ракетная
+                    шахта</a>
+                <a href="#fin"><img class="lozad" data-src="/static/img/Rocket.png"
+                        src="data:image/gif;base64,R0lGODlhIAAgAIAAAP///wAAACH5BAEAAAEALAAAAAAgACAAAAIejI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC5sFADs=">Финал</a>
+            </nav>
+        </div>
+        <div class="main">
+            {% block header %}
+            {%include 'blocks/Header.html'%}
+            {%endblock%}
+            <div class="guide-content">
+                <div class="guide-text guide-start" style="display:flex;">
+                    <div class="guide-preface">
+                        <p>Наша команда прошла игру Factorio, и выделила
+                            основные этапы, чтобы поделится с вами нашим
+                            опытом. Так же мы выделили советы, которые
+                            помогут вам при прохождении.</p>
+                        <p>Мы надеемся что вы не совершите тех же ошибок что
+                            и мы, и у вас получится завод превосходящий наш
+                            по всем параметрам.</p>
+                        <p>Сид нашего прохождения: <span style="color:orange;">1814148305</span> .</p>
+                        <div class="advices" id="main_advices">
+                            <p><b>Основные советы:</b></p>
+                            <ul style="color: orange;">
+                                <li>Изучайте интерфейс и кнопки управления</li>
+                                <li>Не игнорируйте игровые подсказки</li>
+                                <li>Проходите обучения, которые
+                                    предоставляет
+                                    игра.</li>
+                                <li>Создайте производство предметов, которые
+                                    постоянно используются: конвейерные
+                                    ленты, столбы, разделители и подземные
+                                    конвейеры. </li>
+                                <li>Исользуйте модули.</li>
+                                <li>Создайте молл, чтобы не ходить по всему
+                                    заводу и собирать предметы для крафта.</li>
+                                <li>Как только вам становится доступна
+                                    добыча
+                                    урана, организуйте ее добычу. Вам
+                                    понадобиться уран-235, чтобы начать
+                                    процесс
+                                    обогащения. Шанс на получение
+                                    урана-235 при простой обработке равен
+                                    0,7%.</li>
+                                <li>Перебрать лучше, чем недобрать.</li>
+                                <li>Всегда думайте о том, как будете
+                                    расширять
+                                    производство в случае необходимости.</li>
+                                <li>Создайте дронов, как только они станут
+                                    доступны.</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="guide-text" id="start">
-                        <p class="headline">Начало</p>
-                        <p>
-                            Начнем сразу с крушения. Мы не видим смысла
-                            показывать настройки генерации, т.к оставили все по
-                            умолчанию.
-                        </p>
-                        <p>В этом прохождении учувствовало 2 игрока. Благодаря
-                            чему мы могли эффективно распределять обязанности.</p>
-                        <img class="lozad" data-src="/static/img/Guide/start.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
+                    <div class="image">
+                        <img class="lozad" data-src="/static/img/index_img.png" alt="index_img">
                     </div>
-                    <div class="guide-text" id="beg_min">
-                        <p class="headline">Начальная добыча</p>
-                        <p>
-                            Первым делом мы собрали наш разбившийся корабль.
-                            Далее мы отправились на поиски залежь: железа, меди,
-                            угля и камня, нам повезло, и они находились близко к
-                            точке крушения, а также находились рядом друг с
-                            другом. </p>
-                        <p>Мы создали каменные печи, твёрдотопливные буры и
-                            манипуляторы, чтобы начать автоматически добывать
-                            уголь, медь и железо, а также производить железные и
-                            медные пластины.</p>
-                        <img class="lozad"
-                            data-src="/static/img/Guide/start_mining.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
+                </div>
+                <div class="guide-text" id="start">
+                    <p class="headline">Начало</p>
+                    <p>
+                        Начнем сразу с крушения. Мы не видим смысла
+                        показывать настройки генерации, т.к оставили все по
+                        умолчанию.
+                    </p>
+                    <p>В этом прохождении учувствовало 2 игрока. Благодаря
+                        чему мы могли эффективно распределять обязанности.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/start.png" alt="start">
                     </div>
-                    <div class="guide-text" id="electro">
-                        <p class="headline">Электричество</p>
-                        <p>
-                            Твердотопливные буры и манипуляторы неэффективны.
-                            Они медленно работают, так к ним еще нужно подводить
-                            уголь. Мы решили как можно скорее перейти к
-                            электрическим. </p>
-                        <p> Для этого необходимо электричество соответственно.
-                            Единственны доступный источник электричества на
-                            данный момент — паровые двигатели.</p>
-                        <img class="lozad"
-                            data-src="/static/img/Guide/electr.png" height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p> Для них требуется уголь и мы решили вести
-                            конвейерную линию, не от маленькой залежи, которую
-                            мы нашли изначально, а от большой чуть дальше, но
-                            была одна проблема. Рядом с залежью стояло 6 червей.</p>
-                        <img class="lozad" data-src="/static/img/Guide/worms.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>Мы проложили ленты не трогая их, но от червей
-                            необходимо было избавится...</p>
+                </div>
+                <div class="guide-text" id="beg_min">
+                    <p class="headline">Начальная добыча</p>
+                    <p>
+                        Первым делом мы собрали наш разбившийся корабль.
+                        Далее мы отправились на поиски залежь: железа, меди,
+                        угля и камня, нам повезло, и они находились близко к
+                        точке крушения, а также находились рядом друг с
+                        другом. </p>
+                    <p>Мы создали каменные печи, твёрдотопливные буры и
+                        манипуляторы, чтобы начать автоматически добывать
+                        уголь, медь и железо, а также производить железные и
+                        медные пластины.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/start_mining.png" alt="start mining">
                     </div>
-                    <div class="guide-text" id="first_reserches">
-                        <p class="headline">Первые исследования</p>
-                        <p>
-                            В начале игры достпен только пистолет. А с ним
-                            уничтожить 6 червей сложная задача, поэтому мы
-                            решили изучить пистолет-пулемет</p>
-                        <img class="lozad"
-                            data-src="/static/img/Guide/first_reserches.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>Для его исследования необходимо 10 красных пакетов и
-                            сами лаборатории. Мы создали как лаборатории и
-                            пакеты, но так как мы неправильно поняли цифры,
-                            которые обозначают затраты пакетов на исследование,
-                            мы создали 150. </p>
-                        <p>Благодаря чему следом изучили: Автоматизацию,
-                            электронику и логистику.</p>
-                        <div class="advices" style="display:flex;">
-                            <img class="lozad"
-                                data-src="/static/img/Guide/numbers_advice.png"
-                                height="20%"
-                                width="30%" style="margin-right: 5px;display:
+                </div>
+                <div class="guide-text" id="electro">
+                    <p class="headline">Электричество</p>
+                    <p>
+                        Твердотопливные буры и манипуляторы неэффективны.
+                        Они медленно работают, так к ним еще нужно подводить
+                        уголь. Мы решили как можно скорее перейти к
+                        электрическим. </p>
+                    <p> Для этого необходимо электричество соответственно.
+                        Единственны доступный источник электричества на
+                        данный момент — паровые двигатели.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/electr.png" alt="electr">
+                    </div>
+                    <p> Для них требуется уголь и мы решили вести
+                        конвейерную линию, не от маленькой залежи, которую
+                        мы нашли изначально, а от большой чуть дальше, но
+                        была одна проблема. Рядом с залежью стояло 6 червей.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/worms.png" alt="worms">
+                    </div>
+                    <p>Мы проложили ленты не трогая их, но от червей
+                        необходимо было избавится...</p>
+                </div>
+                <div class="guide-text" id="first_reserches">
+                    <p class="headline">Первые исследования</p>
+                    <p>
+                        В начале игры достпен только пистолет. А с ним
+                        уничтожить 6 червей сложная задача, поэтому мы
+                        решили изучить пистолет-пулемет</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/first_reserches.png" alt="Firs researches">
+                    </div>
+                    <p>Для его исследования необходимо 10 красных пакетов и
+                        сами лаборатории. Мы создали как лаборатории и
+                        пакеты, но так как мы неправильно поняли цифры,
+                        которые обозначают затраты пакетов на исследование,
+                        мы создали 150. </p>
+                    <p>Благодаря чему следом изучили: Автоматизацию,
+                        электронику и логистику.</p>
+                    <div class="advices" style="display:flex;">
+                        <img class="lozad" data-src="/static/img/Guide/numbers_advice.png" height="20%" width="30%"
+                            style="margin-right: 5px;display:
                                 block; border-radius: 5px; border: 2px
-                                solid black;">
-                            <p>Как мы поняли позже, число (1) обозначает время,
-                                которое уйдет на исследование одного пакета, а
-                                число (2) обозначает кол-во пакетов каждого
-                                вида.</p>
-                        </div>
-                        <p>После создания пистолета-пулемета, мы с легкостью
-                            справились с червями.</p>
+                                solid black;" alt="Advice">
+                        <p>Как мы поняли позже, число (1) обозначает время,
+                            которое уйдет на исследование одного пакета, а
+                            число (2) обозначает кол-во пакетов каждого
+                            вида.</p>
                     </div>
-                    <div class="guide-text" id="more_plates">
-                        <p class="headline">Больше пластин!!</p>
-                        <p>Пока я занимался электричеством, мой напарник
-                            занимался расширением производства железных пластин.
+                    <p>После создания пистолета-пулемета, мы с легкостью
+                        справились с червями.</p>
+                </div>
+                <div class="guide-text" id="more_plates">
+                    <p class="headline">Больше пластин!!</p>
+                    <p>Пока я занимался электричеством, мой напарник
+                        занимался расширением производства железных пластин.
+                    </p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/iron_extentions.png" alt="Iron extention">
+                    </div>
+                    <p>Он расширил добычу как железа так и угля и заменил
+                        твердотопливные буры на электрические.</p>
+                </div>
+
+                <div class="guide-text" id="shina">
+                    <p class="headline">Главная шина</p>
+                    <p>Мы изначально понимали, что необходимо как-то
+                        организовать ресурсы, которые чаще всего
+                        используются в крафтах, и поэтому решили создать <a href="terms#shina" target="_blank">главную
+                            шину</a>.</p>
+                    <p>На шину мы решили вывести железные и медные плиты,
+                        электросхемы(по 4 ленты), пластик и сталь(по две
+                        линии из 4), улучшенные электросхемы (2 из 4
+                        линии),а также процессоры и аккумуляторы (по 1 линии
+                        из 4) и 2 линии под шестерни.</p>
+                    <p>Все имеющиеся уже сейчас ресурсы мы подключили к шине
+                        через баленсеры.</p>
+                    <p>Мы решили расположить производство всех пакетов
+                        справа от шины, так не имели представления насколько
+                        много места они по итогу займут, а слева от шины
+                        будет расположено общее производство.</p>
+                    <p>Т.к большей части предметов у нас пока нет, мы решили
+                        просто разметить линии по которым в будущем будут
+                        идти ресурсы.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/shina.png">
+                    </div>
+                </div>
+
+                <div class="guide-text" id="more_belts">
+                    <p class="headline">Больше конвейеров!!</p>
+                    <p>Следующим шагом мы решили создать автоматический
+                        крафт конвейерных лент.</p>
+                    <p>Для них были необходимы шестерни, которые также мы
+                        решили вывести на шину.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/gears.png" alt="gears">
+                    </div>
+                    <p>Далее по такой же схеме было создано производство
+                        самих лент.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/belts.png" alt=belts>
+                    </div>
+                </div>
+
+                <div class="guide-text" id="res">
+                    <p class="headline">Исследования</p>
+                    <p>Следующим шагом мы решили наладить исследования.</p>
+                    <p>Сначала мы создали производство красных пакетов.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/red.png">
+                    </div>
+                    <p>Следом, сами лаборатории. Мы решили сосредоточиться
+                        не на экономии а на скорости изучения поэтому
+                        расположили лаборатории именно так, а в далее просто
+                        достраивали ряды лабораторий.</p>
+                    <p>Далее мы открыли все исследования, которые требуют
+                        красные пакеты.</p>
+                </div>
+
+                <div class="guide-text" id="bugs">
+                    <p class="headline">С меня довольно этих гре&^$#х
+                        тараканов на этом гре*№!#м заводе!!</p>
+                    <p>Нас атаковали жуки. Из-за чего было решено, зачистить
+                        все ближайшие гнезда.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/bags.png" alt="Bags">
+                    </div>
+                    <p>Для этого мы ставили по 2 турели, и переносили их
+                        вперед по мере продвижения. Таким образом мы
+                        зачистили 5 гнезд.</p>
+                </div>
+
+                <div class="guide-text" id="circ">
+                    <p class="headline">Электросхемы</p>
+                    <p>Следующим шагом стало производство электросхем.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/Green_circ.png" alt="green circ">
+                    </div>
+                    <p>Данная схема, мягко говоря, не очень хороша т.к ее
+                        сложно расширять. Мы рекомендуем использовать схему
+                        <a href="scheme#popup_6" target="_blank">“Производство
+                            электросхем”</a>. Использование схемы на
+                        изображении была одна из болезненных ошибок. Очень
+                        быстро нам стало не хватать электросхем, а к тому
+                        времени в сверху уже появились другие производства,
+                        которые мешали расширяться.
+                    </p>
+                </div>
+
+                <div class="guide-text" id="green">
+                    <p class="headline">Зеленые пакеты.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/green.png" alt="green">
+                    </div>
+                    <p>Пришло время зеленых пакетов. Для них необходимо
+                        создать производство манипуляторов.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/manip.png" alt="manip">
+                    </div>
+                    <p>Так же были расширены лаборатории на 2 ряда, а также
+                        производство красных пакетов в 2 раза.</p>
+                    <div class="advices">
+                        <p>Первым делом мы решили получить машину, для этого
+                            было необходимо изучить “Двигатель”, “Логистика
+                            2” и
+                            “Автотранспорт” а далее изучали все что могли
+                            изучить.</p>
+                    </div>
+                </div>
+
+                <div class="guide-text" id="steel">
+                    <p class="headline">Сталь</p>
+                    <p>Далее было налажено производство стали.</p>
+                    <p>Для начала игры такого кол-ва должно хватить, но в
+                        будущем оно будет сильно расширенно, так что
+                        необходимо заранее выделить большое Пространство и
+                        ничего на нем не строить.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/steel.png">
+                    </div>
+                </div>
+
+                <div class="guide-text" id="fast_belts">
+                    <p class="headline">Быстрые конвейеры</p>
+                    <p>Пришло время обновить конвейеры.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/fast_bellts.png" alt="fast belts">
+                    </div>
+                </div>
+
+                <div class="guide-text" id="chem">
+                    <p class="headline">Химия</p>
+                    <p>Следующей целью стали синие пакеты, а для них
+                        необходима сера, двигатели и улучшенные схемы.</p>
+                    <p>Мы решили начать с освоения химической промышленности
+                        и созадния серы и пластика.</p>
+                    <p>Для начала освоения химической промышленности
+                        необходима нефть</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/neft.png" alt="neft">
+                    </div>
+                    <p>Послие получения нефти, мы создали и само
+                        производство.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/chemistry.png" alt="chemistry">
+                    </div>
+                </div>
+
+                <div class="guide-text" id="blue">
+                    <p class="headline">Синие пакеты</p>
+                    <p>Продолжаем путь к синим пакетам. Далее мы решили
+                        создать производство улучшенных электросхем.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/red_circ.png" alt="red circ">
+                    </div>
+                    <p>И параллельно этому создали производство двигателей и
+                        труб.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/engines.png">
+                    </div>
+                    <p>И наконец сами пакеты.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/blue.png" alt="blue">
+                    </div>
+                    <div class="advices">
+                        <p>Первым делом мы изучили “Продвинутая металлургия
+                            2”, чтобы открыть и заменить электрические
+                            печки.</p>
+                        <p>А далее “Продвинутая переработка нефти” и”
+                            Смазочная жидкость”. На мы еще верили, что
+                            сможем пройти игру только на паровых двигателях,
+                            мы изучали все подряд, игнорируя ядерный
+                            реактор.</p>
+                    </div>
+                </div>
+
+                <div class="guide-text">
+                    <p class="headline">Нехватка металла.</p>
+                    <p>С ростом производства растет и потребление. Появилась
+                        нехватка металла, но нам повезло и большая залежь
+                        находилась очень близко к заводу, из-за чего было не
+                        строить железную дорогу, а просто провести
+                        конвейеры.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/iron.png" alt="iron">
+                    </div>
+                    <div class="advices">
+                        <p>Здесь мы совершили небольшую ошибку. На момент
+                            постройки мы знали схему балансера 4 к 4,
+                            поэтому мы, дабы уменьшить кол-во входных лент,
+                            соединили их следующим образом: </p>
+                        <div class="guide-image">
+                            <img class="lozad" data-src="/static/img/Guide/misstake.png" alt="misstake">
+                        </div>
+                        <p>Из-за такого подключения не добывалось на двух
+                            линиях, оно просто стояло на метсе, т.к линия
+                            была постоянно заполена.</p>
+                        <p>Правильней было использовать балансер 6 к 4.</p>
+                    </div>
+                </div>
+
+                <div class="guide-text" id="black_ingr">
+                    <p class="headline">Ингридиенты для черных пакетов</p>
+                    <p>Новой целью стали черные пакеты.Для них необходимы:
+                        гранаты, бронебойные патроны и стены.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/ammo.png" alt="ammo">
+                    </div>
+                    <p>С гранатами и бронебойными патронами все просто, а
+                        вот со стенами…</p>
+                </div>
+
+                <div class="guide-text" id="walls">
+                    <p class="headline">Стены</p>
+                    <p>Для стен необходим камень. И вот тут уже нам не
+                        повезло. Ближайшая залежь камня находится далеко от
+                        завода. Следовательно, нужно вести железную дорогу.
+                        Использовать только один поезд будет не очень
+                        эффективно, поэтому необходимо два, один загружается
+                        другой разгружается.</p>
+                    <p>Но если поездов 2, то как избежать столкновений?
+                        Ответ: светофоры (для понимания рекомендую пройти
+                        внутриигровое обучение).</p>
+                    <p>Загрузка:</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/train.png" alt="train">
+                    </div>
+                    <p>Разгрузка:</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/from_train.png" alt="from_train">
+                    </div>
+                    <div class="advices">
+                        <p>Здесь была совершена еще одна ошибка. По данной
+                            схеме вагоны загружаются поочередно, а
+                            разгружаются одновременно, из-за чего 1 поезд
+                            ждал пока загрузится другой. Правильней было бы
+                            использовать балансер с 6 выходами, чтобы в
+                            вагоны одновременно поступал камень.</p>
+                        <p>Но в нашем случае нам не нужно много камня
+                            поэтому мы решили оставить все как есть.</p>
+                    </div>
+                    <p>И далее стены по уже стандартной схеме.</p>
+                </div>
+
+                <div class="guide-text" id="black">
+                    <p class="headline">Черные пакеты</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/black.png" alt="black">
+                    </div>
+                    <div class="advices">
+                        <p>Первым делом мы решили изучить танк, чтобы
+                            зачистить все гнезда поблизости, а потом как и в
+                            прошлые разы, начали изучать все подряд.</p>
+                    </div>
+                </div>
+
+                <div class="guide-text" id="neft">
+                    <p class="headline"> Продвинутаяобработка нефти (смазка,
+                        твердое топливо и ракетное топливо)</p>
+                    <p>После изучения продвинутой обработки нефти, было
+                        решено наладить производство ракетного топлива, т.к
+                        при использовании его в транспорте оно дает
+                        ускорение 180%. </p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/RF.png" alt="rf">
+                    </div>
+                    <p>Так же было налажено производство серы.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/sulfur.png" alt="sulfur">
+                    </div>
+                </div>
+
+                <div class="guide-text" id="cons">
+                    <p class="headline">Последствия</p>
+                    <p>Изначально мы не видели смысла в ядерном реакторе. Не
+                        понимали зачем налаживать процесс обогащения и саму
+                        добычу урана, ведь можно спокойно расширять паровые
+                        двигатели и не знать проблем. Но тут мы увидели
+                        следующее</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/polution.png">
+                    </div>
+                    <p>Бойлеры производят большое кол-во загрязнения, из-за
+                        чего вода загрязняется и насос меньше откачивает
+                        воды, следовательно, меньше энергии. </p>
+                    <p>В такой ситуации можно сделать следующие:</p>
+                    <oL>
+                        <li>Перенести насос. Это временное решение т.к
+                            далеко вести трубы не эффективно, т.к в таком
+                            случае скорее всего их разрушат насекомые. А
+                            если не вести далеко, то довольно быстро
+                            загрязнится вода и там.</li>
+                        <li>Перенести подальше от воды бойлеры и паровые
+                            двигатели. Это решит проблемы, но огромное
+                            кол-во загрязнения никуда не денется.</li>
+                        <li>Использовать солнечные панели. Одна панель
+                            производит 60 кВт днем, когда один паровой
+                            двигатель производит 900 кВт вне зависимости от
+                            времени суток. Для замены одного парового
+                            двигателя понадобится 15 панелей, а у нас было
+                            40 двигателей, и энергии хватало почти впритык.
+                            Следовательно нам было необходимо 600 панелей,
+                            что займет огромное пространство.</li>
+                        <li>Уйти в ядерную энергетику.</li>
+                    </oL>
+                    <p>Мы решили уйти в ядерную энергетику и наконец создать
+                        ядерные реакторы. Но т.к мы спохватились довольно
+                        поздно, и нам уже не хватает энергии мы так же
+                        перенесли насос.</p>
+                </div>
+
+                <div class="guide-text" id="uran">
+                    <p class="headline">Уран</p>
+                    <p>Чтобы работал ядерный реактор необходим уран,
+                        который, для начала, необходимо добыть.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/ur.png" alt="ur">
+                    </div>
+                    <p>Для добычи урана необходима серная кислота,
+                        производство которой мы предлагаем вам придумать
+                        самим, т.к оно довольно простое.</p>
+                    <p>На данный момент у нас не было изучен процесс
+                        обогащения Коварекса, т.к у нас не было производства
+                        фиолетовых пакетов. Следовательно, нам нужны
+                        фиолетовые пакеты.</p>
+                    <p>Мы рекомендуем вам использовать следующую схему для
+                        обогащения урана <a href="scheme#popup_2" target="_blank">(СХЕМА)</a>.</p>
+                </div>
+
+                <div class="guide-text" id="purpule">
+                    <p class="headline">Фиолетовые пакеты</p>
+                    <p>Следующим шагом мы начали производить фиолетовые
+                        пакеты.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/purpule.png" alt="purpule">
+                    </div>
+                    <div class="advices">
+                        <p>Первым делом мы исследовали “Процесс обогащения
+                            Коварекса“ и “Переработка ядерного топлива”, а
+                            дальше мы исследовали все что было доступно. Но
+                            мы вам рекомендуем изучить “Логистика 3” и
+                            “Автоматизация 3”, и создать автоматическое
+                            производство ассемблеров и конвейерных лент,
+                            чтобы ускорить производство. Мы этого не сделали
+                            и это еще одна наша ошибка.</p>
+                    </div>
+                </div>
+
+                <div class="guide-text" id="reactor">
+                    <p class="headline">Ядерный реактор</p>
+                    <p>Наконец, дождавшись уран-235, мы полностью перешли на
+                        ядерную энергетику.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/Reactor.png" alt="reactor">
+                    </div>
+                    <p>Т.к у нас уже была большая нехватка электричества,
+                        ресурсов на ядерные реакторы и остальные компоненты
+                        приходилось долго ждать, было решено использовать
+                        схемы из <a href="scheme#popup_3" target="_blank">двух
+                            реакторов</a>.</p>
+                    <p>Далее, как наладилось производство ресурсов, мы
+                        перешли на схему которую можно спокойно расширять
+                        при необходимости <a href="scheme#popup_4" target="_blank">(подробнее)</a>.</p>
+                </div>
+
+                <div class="guide-text" id="yellow">
+                    <p class="headline">Желтые пакеты</p>
+                    <p>На данном этапе была ощутима нехватка: меди, железа и
+                        всех электросхем.</p>
+                    <p>Если с железом и медью все просто, то с
+                        электросхемами все не так. Мы надеемся что вы не
+                        совершите ту же ошибку что и мы и воспользуетесь
+                        схемой, которую мы приводили выше.</p>
+                    <p> А нам пришлось переносить все производство зеленых
+                        схем вниз.</p>
+                    <p>Мы считаем необходимым показать лишь производство
+                        процессоров, т.к там впервые используется жидкость в
+                        ассемблере, а остальные компоненты ничем ни
+                        отличаются по сложности от предыдущих.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/blue_circ.png" alt="blue circ">
+                    </div>
+                    <p>Желтые схемы</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/yellow.png" alt="yellow">
+                    </div>
+                    <div class="advices">
+                        <p>С появлением желтых пакетов мы наконец решили
+                            создать дронов, т.к благодаря желтых пакетам мы
+                            смогли изучить “Портативный термоядерный
+                            реактор” и “Логистическая система”.
                         </p>
-                        <img class="lozad"
-                            data-src="/static/img/Guide/iron_extentions.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>Он расширил добычу как железа так и угля и заменил
-                            твердотопливные буры на электрические.</p>
-                    </div>
-
-                    <div class="guide-text" id="shina">
-                        <p class="headline">Главная шина</p>
-                        <p>Мы изначально понимали, что необходимо как-то
-                            организовать ресурсы, которые чаще всего
-                            используются в крафтах, и поэтому решили создать <a
-                                href="terms#shina" target="_blank">главную шину</a>.</p>
-                        <p>На шину мы решили вывести железные и медные плиты,
-                            электросхемы(по 4 ленты), пластик и сталь(по две
-                            линии из 4), улучшенные электросхемы (2 из 4
-                            линии),а также процессоры и аккумуляторы (по 1 линии
-                            из 4) и 2 линии под шестерни.</p>
-                        <p>Все имеющиеся уже сейчас ресурсы мы подключили к шине
-                            через баленсеры.</p>
-                        <p>Мы решили расположить производство всех пакетов
-                            справа от шины, так не имели представления насколько
-                            много места они по итогу займут, а слева от шины
-                            будет расположено общее производство.</p>
-                        <p>Т.к большей части предметов у нас пока нет, мы решили
-                            просто разметить линии по которым в будущем будут
-                            идти ресурсы.</p>
-                        <img class="lozad" data-src="/static/img/Guide/shina.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                    </div>
-
-                    <div class="guide-text" id="more_belts">
-                        <p class="headline">Больше конвейеров!!</p>
-                        <p>Следующим шагом мы решили создать автоматический
-                            крафт конвейерных лент.</p>
-                        <p>Для них были необходимы шестерни, которые также мы
-                            решили вывести на шину.</p>
-                        <img class="lozad" data-src="/static/img/Guide/gears.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>Далее по такой же схеме было создано производство
-                            самих лент.</p>
-                        <img class="lozad" data-src="/static/img/Guide/belts.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                    </div>
-
-                    <div class="guide-text" id="res">
-                        <p class="headline">Исследования</p>
-                        <p>Следующим шагом мы решили наладить исследования.</p>
-                        <p>Сначала мы создали производство красных пакетов.</p>
-                        <img class="lozad" data-src="/static/img/Guide/red.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>Следом, сами лаборатории. Мы решили сосредоточиться
-                            не на экономии а на скорости изучения поэтому
-                            расположили лаборатории именно так, а в далее просто
-                            достраивали ряды лабораторий.</p>
-                        <p>Далее мы открыли все исследования, которые требуют
-                            красные пакеты.</p>
-                    </div>
-
-                    <div class="guide-text" id="bugs">
-                        <p class="headline">С меня довольно этих гре&^$#х
-                            тараканов на этом гре*№!#м заводе!!</p>
-                        <p>Нас атаковали жуки. Из-за чего было решено, зачистить
-                            все ближайшие гнезда.</p>
-                        <img class="lozad" data-src="/static/img/Guide/bags.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>Для этого мы ставили по 2 турели, и переносили их
-                            вперед по мере продвижения. Таким образом мы
-                            зачистили 5 гнезд.</p>
-                    </div>
-
-                    <div class="guide-text" id="circ">
-                        <p class="headline">Электросхемы</p>
-                        <p>Следующим шагом стало производство электросхем.</p>
-                        <img class="lozad"
-                            data-src="/static/img/Guide/Green_circ.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>Данная схема, мягко говоря, не очень хороша т.к ее
-                            сложно расширять. Мы рекомендуем использовать схему
-                            <a href="scheme#popup_6" target="_blank">“Производство
-                                электросхем”</a>. Использование схемы на
-                            изображении была одна из болезненных ошибок. Очень
-                            быстро нам стало не хватать электросхем, а к тому
-                            времени в сверху уже появились другие производства,
-                            которые мешали расширяться.</p>
-                    </div>
-
-                    <div class="guide-text" id="green">
-                        <p class="headline">Зеленые пакеты.</p>
-                        <img class="lozad" data-src="/static/img/Guide/green.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>Пришло время зеленых пакетов. Для них необходимо
-                            создать производство манипуляторов.</p>
-                        <img class="lozad" data-src="/static/img/Guide/manip.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>Так же были расширены лаборатории на 2 ряда, а также
-                            производство красных пакетов в 2 раза.</p>
-                        <div class="advices">
-                            <p>Первым делом мы решили получить машину, для этого
-                                было необходимо изучить “Двигатель”, “Логистика
-                                2” и
-                                “Автотранспорт” а далее изучали все что могли
-                                изучить.</p></div>
-                    </div>
-
-                    <div class="guide-text" id="steel">
-                        <p class="headline">Сталь</p>
-                        <p>Далее было налажено производство стали.</p>
-                        <p>Для начала игры такого кол-ва должно хватить, но в
-                            будущем оно будет сильно расширенно, так что
-                            необходимо заранее выделить большое Пространство и
-                            ничего на нем не строить.</p>
-                        <img class="lozad" data-src="/static/img/Guide/steel.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                    </div>
-
-                    <div class="guide-text" id="fast_belts">
-                        <p class="headline">Быстрые конвейеры</p>
-                        <p>Пришло время обновить конвейеры.</p>
-                        <img class="lozad"
-                            data-src="/static/img/Guide/fast_bellts.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                    </div>
-
-                    <div class="guide-text" id="chem">
-                        <p class="headline">Химия</p>
-                        <p>Следующей целью стали синие пакеты, а для них
-                            необходима сера, двигатели и улучшенные схемы.</p>
-                        <p>Мы решили начать с освоения химической промышленности
-                            и созадния серы и пластика.</p>
-                        <p>Для начала освоения химической промышленности
-                            необходима нефть</p>
-                        <img class="lozad" data-src="/static/img/Guide/neft.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>Послие получения нефти, мы создали и само
-                            производство.</p>
-                        <img class="lozad"
-                            data-src="/static/img/Guide/chemistry.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                    </div>
-
-                    <div class="guide-text" id="blue">
-                        <p class="headline">Синие пакеты</p>
-                        <p>Продолжаем путь к синим пакетам. Далее мы решили
-                            создать производство улучшенных электросхем.</p>
-                        <img class="lozad"
-                            data-src="/static/img/Guide/red_circ.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>И параллельно этому создали производство двигателей и
-                            труб.</p>
-                        <img class="lozad"
-                            data-src="/static/img/Guide/engines.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>И наконец сами пакеты.</p>
-                        <img class="lozad" data-src="/static/img/Guide/blue.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <div class="advices">
-                            <p>Первым делом мы изучили “Продвинутая металлургия
-                                2”, чтобы открыть и заменить электрические
-                                печки.</p>
-                            <p>А далее “Продвинутая переработка нефти” и”
-                                Смазочная жидкость”. На мы еще верили, что
-                                сможем пройти игру только на паровых двигателях,
-                                мы изучали все подряд, игнорируя ядерный
-                                реактор.</p>
-                        </div>
-                    </div>
-
-                    <div class="guide-text">
-                        <p class="headline">Нехватка металла.</p>
-                        <p>С ростом производства растет и потребление. Появилась
-                            нехватка металла, но нам повезло и большая залежь
-                            находилась очень близко к заводу, из-за чего было не
-                            строить железную дорогу, а просто провести
-                            конвейеры.</p>
-                        <img class="lozad" data-src="/static/img/Guide/iron.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <div class="advices">
-                            <p>Здесь мы совершили небольшую ошибку. На момент
-                                постройки мы знали схему балансера 4 к 4,
-                                поэтому мы, дабы уменьшить кол-во входных лент,
-                                соединили их следующим образом: </p>
-                            <img class="lozad"
-                                data-src="/static/img/Guide/misstake.png"
-                                height="60%"
-                                width="60%" style="margin-right:
-                                auto;margin-left:
-                                auto;display: block; border-radius: 5px; border:
-                                2px
-                                solid black;">
-                            <p>Из-за такого подключения не добывалось на двух
-                                линиях, оно просто стояло на метсе, т.к линия
-                                была постоянно заполена.</p>
-                            <p>Правильней было использовать балансер 6 к 4.</p>
-                        </div>
-                    </div>
-
-                    <div class="guide-text" id="black_ingr">
-                        <p class="headline">Ингридиенты для черных пакетов</p>
-                        <p>Новой целью стали черные пакеты.Для них необходимы:
-                            гранаты, бронебойные патроны и стены.</p>
-                        <img class="lozad" data-src="/static/img/Guide/ammo.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>С гранатами и бронебойными патронами все просто, а
-                            вот со стенами…</p>
-                    </div>
-
-                    <div class="guide-text" id="walls">
-                        <p class="headline">Стены</p>
-                        <p>Для стен необходим камень. И вот тут уже нам не
-                            повезло. Ближайшая залежь камня находится далеко от
-                            завода. Следовательно, нужно вести железную дорогу.
-                            Использовать только один поезд будет не очень
-                            эффективно, поэтому необходимо два, один загружается
-                            другой разгружается.</p>
-                        <p>Но если поездов 2, то как избежать столкновений?
-                            Ответ: светофоры (для понимания рекомендую пройти
-                            внутриигровое обучение).</p>
-                        <p>Загрузка:</p>
-                        <img class="lozad" data-src="/static/img/Guide/train.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>Разгрузка:</p>
-                        <img class="lozad"
-                            data-src="/static/img/Guide/from_train.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <div class="advices">
-                            <p>Здесь была совершена еще одна ошибка. По данной
-                                схеме вагоны загружаются поочередно, а
-                                разгружаются одновременно, из-за чего 1 поезд
-                                ждал пока загрузится другой. Правильней было бы
-                                использовать балансер с 6 выходами, чтобы в
-                                вагоны одновременно поступал камень.</p>
-                            <p>Но в нашем случае нам не нужно много камня
-                                поэтому мы решили оставить все как есть.</p>
-                        </div>
-                        <p>И далее стены по уже стандартной схеме.</p>
-                    </div>
-
-                    <div class="guide-text" id="black">
-                        <p class="headline">Черные пакеты</p>
-                        <img class="lozad" data-src="/static/img/Guide/black.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <div class="advices">
-                            <p>Первым делом мы решили изучить танк, чтобы
-                                зачистить все гнезда поблизости, а потом как и в
-                                прошлые разы, начали изучать все подряд.</p>
-                        </div>
-                    </div>
-
-                    <div class="guide-text" id="neft">
-                        <p class="headline"> Продвинутаяобработка нефти (смазка,
-                            твердое топливо и ракетное топливо)</p>
-                        <p>После изучения продвинутой обработки нефти, было
-                            решено наладить производство ракетного топлива, т.к
-                            при использовании его в транспорте оно дает
-                            ускорение 180%. </p>
-                        <img class="lozad" data-src="/static/img/Guide/RF.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>Так же было налажено производство серы.</p>
-                        <img class="lozad" data-src="/static/img/Guide/RF.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                    </div>
-
-                    <div class="guide-text" id="cons">
-                        <p class="headline">Последствия</p>
-                        <p>Изначально мы не видели смысла в ядерном реакторе. Не
-                            понимали зачем налаживать процесс обогащения и саму
-                            добычу урана, ведь можно спокойно расширять паровые
-                            двигатели и не знать проблем. Но тут мы увидели
-                            следующее</p>
-                        <img class="lozad"
-                            data-src="/static/img/Guide/polution.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>Бойлеры производят большое кол-во загрязнения, из-за
-                            чего вода загрязняется и насос меньше откачивает
-                            воды, следовательно, меньше энергии. </p>
-                        <p>В такой ситуации можно сделать следующие:</p>
-                        <oL>
-                            <li>Перенести насос. Это временное решение т.к
-                                далеко вести трубы не эффективно, т.к в таком
-                                случае скорее всего их разрушат насекомые. А
-                                если не вести далеко, то довольно быстро
-                                загрязнится вода и там.</li>
-                            <li>Перенести подальше от воды бойлеры и паровые
-                                двигатели. Это решит проблемы, но огромное
-                                кол-во загрязнения никуда не денется.</li>
-                            <li>Использовать солнечные панели. Одна панель
-                                производит 60 кВт днем, когда один паровой
-                                двигатель производит 900 кВт вне зависимости от
-                                времени суток. Для замены одного парового
-                                двигателя понадобится 15 панелей, а у нас было
-                                40 двигателей, и энергии хватало почти впритык.
-                                Следовательно нам было необходимо 600 панелей,
-                                что займет огромное пространство.</li>
-                            <li>Уйти в ядерную энергетику.</li>
-                        </oL>
-                        <p>Мы решили уйти в ядерную энергетику и наконец создать
-                            ядерные реакторы. Но т.к мы спохватились довольно
-                            поздно, и нам уже не хватает энергии мы так же
-                            перенесли насос.</p>
-                    </div>
-
-                    <div class="guide-text" id="uran">
-                        <p class="headline">Уран</p>
-                        <p>Чтобы работал ядерный реактор необходим уран,
-                            который, для начала, необходимо добыть.</p>
-                        <img class="lozad" data-src="/static/img/Guide/ur.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>Для добычи урана необходима серная кислота,
-                            производство которой мы предлагаем вам придумать
-                            самим, т.к оно довольно простое.</p>
-                        <p>На данный момент у нас не было изучен процесс
-                            обогащения Коварекса, т.к у нас не было производства
-                            фиолетовых пакетов. Следовательно, нам нужны
-                            фиолетовые пакеты.</p>
-                        <p>Мы рекомендуем вам использовать следующую схему для
-                            обогащения урана <a href="scheme#popup_2"
-                                target="_blank">(СХЕМА)</a>.</p>
-                    </div>
-
-                    <div class="guide-text" id="purpule">
-                        <p class="headline">Фиолетовые пакеты</p>
-                        <p>Следующим шагом мы начали производить фиолетовые
-                            пакеты.</p>
-                        <img class="lozad"
-                            data-src="/static/img/Guide/purpule.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <div class="advices">
-                            <p>Первым делом мы исследовали “Процесс обогащения
-                                Коварекса“ и “Переработка ядерного топлива”, а
-                                дальше мы исследовали все что было доступно. Но
-                                мы вам рекомендуем изучить “Логистика 3” и
-                                “Автоматизация 3”, и создать автоматическое
-                                производство ассемблеров и конвейерных лент,
-                                чтобы ускорить производство. Мы этого не сделали
-                                и это еще одна наша ошибка.</p>
-                        </div>
-                    </div>
-
-                    <div class="guide-text" id="reactor">
-                        <p class="headline">Ядерный реактор</p>
-                        <p>Наконец, дождавшись уран-235, мы полностью перешли на
-                            ядерную энергетику.</p>
-                        <img class="lozad"
-                            data-src="/static/img/Guide/Reactor.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>Т.к у нас уже была большая нехватка электричества,
-                            ресурсов на ядерные реакторы и остальные компоненты
-                            приходилось долго ждать, было решено использовать
-                            схемы из <a href="scheme#popup_3" target="_blank">двух
-                                реакторов</a>.</p>
-                        <p>Далее, как наладилось производство ресурсов, мы
-                            перешли на схему которую можно спокойно расширять
-                            при необходимости <a href="scheme#popup_4"
-                                target="_blank">(подробнее)</a>.</p>
-                    </div>
-
-                    <div class="guide-text" id="yellow">
-                        <p class="headline">Желтые пакеты</p>
-                        <p>На данном этапе была ощутима нехватка: меди, железа и
-                            всех электросхем.</p>
-                        <p>Если с железом и медью все просто, то с
-                            электросхемами все не так. Мы надеемся что вы не
-                            совершите ту же ошибку что и мы и воспользуетесь
-                            схемой, которую мы приводили выше.</p>
-                        <p> А нам пришлось переносить все производство зеленых
-                            схем вниз.</p>
-                        <p>Мы считаем необходимым показать лишь производство
-                            процессоров, т.к там впервые используется жидкость в
-                            ассемблере, а остальные компоненты ничем ни
-                            отличаются по сложности от предыдущих.</p>
-                        <img class="lozad"
-                            data-src="/static/img/Guide/blue_circ.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>Желтые схемы</p>
-                        <img class="lozad"
-                            data-src="/static/img/Guide/yellow.png" height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <div class="advices">
-                            <p>С появлением желтых пакетов мы наконец решили
-                                создать дронов, т.к благодаря желтых пакетам мы
-                                смогли изучить “Портативный термоядерный
-                                реактор” и “Логистическая система”.
-                            </p>
-                            <p>И только потом мы продолжили идти к ракете.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="guide-text" id="rocket">
-                        <p class="headline">Ракетная шахта</p>
-                        <p>Для запуска ракеты, ракетную шахту необходимо
-                            снабжать топливом, конструкциями малой плотности и
-                            блоками управления ракеты.</p>
-                        <img class="lozad" data-src="/static/img/Guide/roket.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>Проще всего это сделать дронами, т.к все компоненты
-                            скорее всего раскиданы по всему заводу и будет
-                            проблематично вести конвейерные ленты.</p>
-                        <p>Самой большой проблемой для нас стали блоки
-                            управления.</p>
-                        <p>К этому моменту у нас появилась нехватка меди, из-за
-                            которой появилась нехватка схем.</p>
-                        <p>Т.к это уже конец игры, мы не видели смысла решать
-                            эти проблемы и решили подождать. Так же мы
-                            использовали модули продуктивности.</p>
-                        <div class="advices">
-                            <p>Если у вас производится достаточно блоков
-                                управления мы советуем использовать маяки в
-                                которых будут лежать модули скорости. Необходимо
-                                использовать именно маяки т.к в ракетной шахте
-                                нельзя использовать модули скорости.</p>
-                        </div>
-                    </div>
-
-                    <div class="guide-text guide-end" id="fin">
-                        <p class="headline">Финал</p>
-                        <p>
-                            Эти 42 часа были сложными и интересными
-                            одновременно. Нам постоянно необходимо было решать
-                            различные проблемы, а так же правильно распределять
-                            обязанности, чтобы максимально эффективно
-                            расходовать время.
+                        <p>И только потом мы продолжили идти к ракете.
                         </p>
-                        <img class="lozad" data-src="/static/img/Guide/stat.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
-                        <p>К концу игры наша карта выглядела так:</p>
-                        <img class="lozad" data-src="/static/img/Guide/map.png"
-                            height="60%"
-                            width="60%" style="margin-right: auto;margin-left:
-                            auto;display: block; border-radius: 5px; border: 2px
-                            solid black;">
+                    </div>
+                </div>
+
+                <div class="guide-text" id="rocket">
+                    <p class="headline">Ракетная шахта</p>
+                    <p>Для запуска ракеты, ракетную шахту необходимо
+                        снабжать топливом, конструкциями малой плотности и
+                        блоками управления ракеты.</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/roket.png" alt="roket">
+                    </div>
+                    <p>Проще всего это сделать дронами, т.к все компоненты
+                        скорее всего раскиданы по всему заводу и будет
+                        проблематично вести конвейерные ленты.</p>
+                    <p>Самой большой проблемой для нас стали блоки
+                        управления.</p>
+                    <p>К этому моменту у нас появилась нехватка меди, из-за
+                        которой появилась нехватка схем.</p>
+                    <p>Т.к это уже конец игры, мы не видели смысла решать
+                        эти проблемы и решили подождать. Так же мы
+                        использовали модули продуктивности.</p>
+                    <div class="advices">
+                        <p>Если у вас производится достаточно блоков
+                            управления мы советуем использовать маяки в
+                            которых будут лежать модули скорости. Необходимо
+                            использовать именно маяки т.к в ракетной шахте
+                            нельзя использовать модули скорости.</p>
+                    </div>
+                </div>
+
+                <div class="guide-text guide-end" id="fin">
+                    <p class="headline">Финал</p>
+                    <p>
+                        Эти 42 часа были сложными и интересными
+                        одновременно. Нам постоянно необходимо было решать
+                        различные проблемы, а так же правильно распределять
+                        обязанности, чтобы максимально эффективно
+                        расходовать время.
+                    </p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/stat.png" alt="stat">
+                    </div>
+                    <p>К концу игры наша карта выглядела так:</p>
+                    <div class="guide-image">
+                        <img class="lozad" data-src="/static/img/Guide/map.png" alt="map">
                     </div>
                 </div>
             </div>
-            {%block footer%}
-            {%include 'blocks/footer.html'%}
-            {% endblock %}
         </div>
-        <script src="static/js/load.js"></script>
-        <script src="/static/js/menu.js"></script>
-    </body>
+        {%block footer%}
+        {%include 'blocks/footer.html'%}
+        {% endblock %}
+    </div>
+    <script src="static/js/load.js"></script>
+    <script src="/static/js/menu.js"></script>
+</body>
+
 </html>

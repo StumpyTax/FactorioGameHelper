@@ -56,3 +56,16 @@ border-radius: 15px;
 		flex-direction: column-reverse;
 	}
 }
+.guide-image{
+	height:60%;
+	width:60% ;
+	margin-right: auto;
+	margin-left:auto;
+	display: block;
+	 border-radius: 5px; 
+	 border: 2px solid black;
+}
+.guide-image img{
+	width: 100%;
+}
+li{list-style-position:inside;}

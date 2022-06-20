@@ -1,4 +1,4 @@
-const table=document.querySelectorAll('table');
+const table=document.querySelectorAll('.table-fixed-head');
 
 let colIndex=-1;
 
@@ -7,8 +7,29 @@ const sortTable=function(index,type,isSorted)
 	const tbody=table[0].querySelector('tbody');
 
 	const compare=function(rowA,rowB){
-		const rowAData=rowA.cells[index>0?index+1:index].innerHTML;
-		const rowBData=rowB.cells[index>0?index+1:index].innerHTML;
+		let rowAData='';
+		let rowBData='';
+
+		if(type=="img"){
+			const Aimg=rowA.cells[index].querySelectorAll('img');
+			const Bimg=rowB.cells[index].querySelectorAll('img');
+			if(Aimg!=null){
+				Aimg.forEach(x => {
+					let alt=x.getAttribute('alt'); 
+					rowAData=rowAData.concat(alt[0]);
+				});
+			if(Bimg!=null){
+				Bimg.forEach(x=>{ 
+					let alt=x.getAttribute('alt'); 
+					rowBData=rowBData+alt[0];
+					})
+			}
+			}
+		}
+		else{
+			rowAData=rowA.cells[index].querySelector('p').innerHTML;
+			rowBData=rowB.cells[index].querySelector('p').innerHTML;
+		}
 
 		switch(type){
 			case "int":
@@ -19,6 +40,12 @@ const sortTable=function(index,type,isSorted)
 					else if(rowAData==rowBData)
 						return 0;
 					return -1;
+			case "img":
+				if(rowAData.length>rowBData.length)
+					return 1;
+				else if(rowAData==rowBData)
+					return 0;
+				else return-1;	
 		}
 	}
 	let rows=[].slice.call(tbody.rows);
@@ -42,6 +69,7 @@ table[0].addEventListener('click',e=>{
 	
 	const el=e.target;
 	if(el.nodeName!="TH") return;
+	console.log(el.nodeName);
 
 	const index=el.cellIndex;
 	const type=el.getAttribute('data-type')
